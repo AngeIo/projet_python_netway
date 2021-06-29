@@ -7,4 +7,4 @@ def init():
     # Changer la langue
     # FR = "True" / EN = "False"
     global isFr
-    isFr = True
+    isFr = False
