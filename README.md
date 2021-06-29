@@ -7,7 +7,7 @@ The best way to do that is by making a collection of utilities in a single scrip
 - [ ] Manage FTP
 - [ ] IT Monitoring
 - [ ] Cybersecurity
-- [ ] Navigation menu
+- [x] Navigation menu
 - [ ] etc. (More details to come)
 
 ## Usage :
