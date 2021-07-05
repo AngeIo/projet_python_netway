@@ -24,12 +24,6 @@ if [ $# -lt 2 -o $# -gt 2 ]
     exit 1
 fi
 
-# Si 1 argument
-#if [ $# -eq 1 ]
-#  then
-#    commit=$(git rev-list --count $1)
-#fi
-
 # Si 2 arguments
 if [ $# -eq 2 ]
   then
