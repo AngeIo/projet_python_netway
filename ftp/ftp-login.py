@@ -18,4 +18,3 @@ def login():
     ftp = FTP(ftp_host, ftp_login, ftp_password)
     print(ftp.getwelcome())
     return ftp
-ftp=login()
