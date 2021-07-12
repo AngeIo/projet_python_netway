@@ -8,7 +8,6 @@ set -e
 ORA='\033[0;33m'
 NC='\033[0m' # No Color
 
-echo -e "Git repo stats between\n${ORA}$1${NC}\n&\n${ORA}$2${NC}\n"
 
 if [ ! "$(git rev-parse --is-inside-work-tree 2> /dev/null)" == "true" ]
   then
@@ -22,6 +21,8 @@ if [ $# -lt 2 -o $# -gt 2 ]
   then
     echo "For this script to work, exactly 2 parameters are required, example : ./review_stats.sh 846d29d cf5956a"
     exit 1
+else
+  echo -e "Git repo stats between\n${ORA}$1${NC}\n&\n${ORA}$2${NC}\n"
 fi
 
 # Si 2 arguments
