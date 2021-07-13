@@ -1,17 +1,16 @@
 #!/usr/bin/env python
 # coding: utf-8
-
-# ********************************************************************************
+# ******************************************************************************
 #
 # Script Name: superscript.py
 # Version: 0.1 (Pre-alpha)
-# Authors: BRETAGNOLLE Guillaume, Angelo GERARD, KANY Kevin, PECH Laurent
+# Authors: BRETAGNOLLE Guillaume, GERARD Angelo, KANY Kevin, PECH Laurent
 # Creation date: 12 june 2021
 #
 # Description : This script is designed for IT technicians to help them manage
 # their IT infrastructure easily.
 #
-# ********************************************************************************
+# ******************************************************************************
 
 # Permet de rendre compatible ce script avec Python2 et Python3
 from __future__ import print_function
