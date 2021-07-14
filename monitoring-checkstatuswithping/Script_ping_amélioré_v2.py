@@ -1,3 +1,6 @@
+#This program checks that a machine is up by sending it a ping. It shows if the ping to a device was "ok" or "unsuccessful".
+
+
 from subprocess import check_call, CalledProcessError,PIPE
 import time
 
