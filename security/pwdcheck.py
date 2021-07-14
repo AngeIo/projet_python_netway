@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# Ce fichier contient une fonction permettant de vérifier la compléxité d'un mot de passe
+
 # Permet de rendre compatible ce script avec Python2 et Python3
 from __future__ import print_function
 
@@ -8,7 +10,6 @@ from __future__ import print_function
 import re
 
 # Cette fonction permet de vérifier si le mot de passe correspond aux exigences de sécurité de la société
-
 def pwdcheck(password):
     """
     Vérifier la compléxité du mot de passe : 'password'
