@@ -1,4 +1,4 @@
-# Script permet de se connecter sur le serveur FTP pour les 3 clients FTP AC distants
+# Ce script permet de se connecter sur le serveur FTP pour les 3 clients FTP AC distants
 
 from ftplib import FTP
 
