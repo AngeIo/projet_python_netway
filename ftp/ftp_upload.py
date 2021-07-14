@@ -1,3 +1,5 @@
+# Ce script permet d'upload un fichier sur le serveur FTP
+
 from ftplib import FTP
 import os
 
