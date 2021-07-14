@@ -4,7 +4,7 @@
 from subprocess import check_call, CalledProcessError,PIPE
 import time
 
-def pinguneplageip():
+def pingiprange():
 
     # Principe du programme :
     print("This program will run a Ping request every 5 seconds on a round of IP's until told to stop (using ctrl+c).")
@@ -33,4 +33,4 @@ def pinguneplageip():
         print("Ctrl+c to stop this program.")
         time.sleep(3)
 
-pinguneplageip()
+pingiprange()
