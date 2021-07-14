@@ -13,5 +13,5 @@ def upload():
     file = open("Test.txt", 'rb') # Dans notre cas, ouverture d'un fichier txt
     ftp.storbinary('STOR Test.txt', file)
     file.close() # Fermer le fichier
-    #ftp.rename(source,'TestOK.txt')
+
 upload()
