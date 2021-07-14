@@ -1,3 +1,5 @@
+# Ce script permet de télécharger un fichier du serveur FTP vers un dossier en local défini
+
 from ftplib import FTP
 import os
 
