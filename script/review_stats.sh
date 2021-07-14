@@ -27,11 +27,13 @@ else
   commitone=$1
   committwo=$2
   err=0
-  if ! [[ $commitone =~ $regex && $committwo =~ $regexcheckcommit ]]
+  # Si les paramètres ne match pas avec le regex, erreur
+  if ! [[ $commitone =~ $regexcheckcommit && $committwo =~ $regexcheckcommit ]]
     then
       echo "Incorrect parameters, these are not Git commit ID/hash, here's an example of parameters : ./review_stats.sh 846d29d cf5956a"
       exit 1
   fi
+  # Si le commit n'existe pas, renvoyer une erreur
   if [ ! $(git cat-file -t $commitone 2>/dev/null) ]
     then
       echo -e "Error: $commitone is not a correct commit" # >> /dev/stderr
@@ -70,7 +72,7 @@ echo -n "Number of commits:"
 echo -e "\t$commit"
 
 echo -n "Summary of changes:"
-echo -e "\t$changes" | tail -n1
+echo -e "\t$changes"
 
 echo -n "Number of merged PRs:"
 echo -e "\t$merged"
