@@ -6,10 +6,15 @@
 This project's goal is to help the company's technicians managing the IT infrastructure.
 The best way to do that is by making a collection of utilities in a single script that we call "superscript".
 
-## Usage
-```shell
-./superscript
-```
+## Screenshot
+[![Screenshot of superscript](screenshot.png)](screenshot.png)
+
+## Features / To-do list
+- [ ] Manage users (create, manage and list users/admins; manage passwords)
+- [ ] Manage FTP (store files on server; daily backups)
+- [ ] IT Monitoring (daily port scanning)
+- [ ] Cybersecurity (brute force attacks simulations)
+- [x] Navigation menu (CLI UI to select a feature to use)
 
 ## Installation
 Please make sure you have the following prerequisites:
@@ -31,12 +36,10 @@ To update the source code to the latest commit, run the following command inside
 git pull
 ```
 
-## Features
-- [ ] Manage users (create, manage and list users/admins; manage passwords)
-- [ ] Manage FTP (store files on server; daily backups)
-- [ ] IT Monitoring (daily port scanning)
-- [ ] Cybersecurity (brute force attacks simulations)
-- [x] Navigation menu (CLI UI to select a feature to use)
+## Usage
+```shell
+./superscript
+```
 
 ## License
 The source code for "superscript" is [Public Domain](UNLICENSE).
