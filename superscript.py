@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # coding: utf-8
 # ******************************************************************************
 #
@@ -30,6 +30,9 @@ from utils import func
 # Charge les paramètres
 settings.init()
 
+# Importe la fonction de gestion des utilisateurs
+from users import manageusers
+
 ##################################################################################
 ###                           Main script function                             ###
 ##################################################################################
@@ -40,13 +43,13 @@ def main():
 
     # Affiche le message de bienvenue du script
     print ("""*****************************************************
-                                         _       _   
- ___ _   _ _ __   ___ _ __ ___  ___ _ __(_)_ __ | |_ 
+                                         _       _
+ ___ _   _ _ __   ___ _ __ ___  ___ _ __(_)_ __ | |_
 / __| | | | '_ \ / _ \ '__/ __|/ __| '__| | '_ \| __|
-\__ \ |_| | |_) |  __/ |  \__ \ (__| |  | | |_) | |_ 
+\__ \ |_| | |_) |  __/ |  \__ \ (__| |  | | |_) | |_
 |___/\__,_| .__/ \___|_|  |___/\___|_|  |_| .__/ \__|
           |_|                             |_|
-          
+
 *****************************************************""")
     if settings.isFr:
         print("Bienvenue sur superscript ! Fait pour vous aider à gérer votre infrastructure informatique !")
@@ -62,6 +65,7 @@ def main():
 
     if menuchoice == 1:
         print("Choice 1 - Manage User")
+        manageusers.manusers()
     elif menuchoice == 2:
         print("Choice 2 - Manage FTP Server")
     elif menuchoice == 3:

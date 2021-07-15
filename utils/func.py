@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # coding: utf-8
 
 # Permet de rendre compatible ce script avec Python2 et Python3
@@ -43,11 +43,13 @@ def myChoice(*args):
     invalidchoice = 0
     print(lines)
     if settings.isFr:
-        choicenumber = raw_input('Entrez un numéro correspondant à la liste ci-dessus et appuyer sur "Entrée": ')
+        choicenumber = input('Entrez un numéro correspondant à la liste ci-dessus et appuyer sur "Entrée": ')
     else:
-        choicenumber = raw_input('Enter a number from the list above and press "Enter": ')
-    if choicenumber:
+        choicenumber = input('Enter a number from the list above and press "Enter": ')
+    if choicenumber and choicenumber.isdigit():
         choicenumber = int(choicenumber)
+    else:
+        choicenumber = 0
     if not choicenumber or choicenumber < startLst or choicenumber > endLst:
       print("\n----\n")
       if settings.isFr:
@@ -61,6 +63,6 @@ def myChoice(*args):
             if settings.isFr:
                 print("/!\ Choix interdit, veuillez réessayer /!\ \n\n")
             else:
-                print("/!\ Forbidden choice, please try again /!\ \n\n") 
+                print("/!\ Forbidden choice, please try again /!\ \n\n")
             invalidchoice = 1
   return choicenumber
