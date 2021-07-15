@@ -42,7 +42,7 @@ git pull
 ```
 
 ## License
-The source code for "superscript" is [Public Domain](UNLICENSE).
+The source code for "superscript" is [Public Domain](LICENSE).
 
 ## Authors
 * BRETAGNOLLE Guillaume
