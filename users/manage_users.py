@@ -1,3 +1,5 @@
+# Ce programme permet de créer, modifier, consulter et supprimer des utilisateurs.
+
 # Import des différents modules
 import time
 import os.path
