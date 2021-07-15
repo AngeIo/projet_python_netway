@@ -1,4 +1,6 @@
-[Logo goes here]
+<p align="center">
+  <img width="500px" src="netway.png">
+</p>
 
 # Python Project - Team Netway
 This project's goal is to help the company's technicians managing the IT infrastructure.
