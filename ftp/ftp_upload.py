@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# coding: utf-8
 # Ce script permet d'upload un fichier sur le serveur FTP
 
 from ftplib import FTP

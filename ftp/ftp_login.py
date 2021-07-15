@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# coding: utf-8
 # Ce script permet de se connecter sur le serveur FTP pour les 3 clients FTP AC distants
 
 from ftplib import FTP

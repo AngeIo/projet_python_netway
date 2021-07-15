@@ -1,5 +1,6 @@
-#This program checks that a machine is up by sending it a ping. It shows if the ping to a device was "ok" or "unsuccessful".
-
+#!/usr/bin/env python3
+# coding: utf-8
+# This program checks that a machine is up by sending it a ping. It shows if the ping to a device was "ok" or "unsuccessful".
 
 from subprocess import check_call, CalledProcessError,PIPE
 import time
@@ -17,7 +18,7 @@ def pingiprange():
         n = int(input("Please input a number above 0 :"))
     if n>0:
         ips = [input("Enter IP number {}: ".format(i)) for i in range(1, n + 1)]
-            
+
 
     while True:
         # Pour chaque ip renseignée, on envoie un ping :

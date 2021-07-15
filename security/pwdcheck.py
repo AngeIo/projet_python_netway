@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 # coding: utf-8
-
 # Ce fichier contient une fonction permettant de vérifier la compléxité d'un mot de passe
 
 # Permet de rendre compatible ce script avec Python2 et Python3
