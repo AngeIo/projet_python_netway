@@ -20,7 +20,7 @@ The best way to do that is by making a collection of utilities in a single scrip
 Please make sure you have the following prerequisites:
 
 - [Git](https://git-scm.com/downloads)
-- [Python 2.7 or 3](https://www.python.org/downloads/)
+- [Python 3](https://www.python.org/downloads/)
 
 ### Downloading the source code
 Clone the repository:

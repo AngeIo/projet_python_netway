@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
 # coding: utf-8
 
-# Permet de rendre compatible ce script avec Python2 et Python3
-from __future__ import print_function
-
 # Importer les variables globales
 import settings
 
