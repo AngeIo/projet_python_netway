@@ -38,6 +38,7 @@ git pull
 
 ## Usage
 ```shell
+cd superscript/
 ./superscript
 ```
 
