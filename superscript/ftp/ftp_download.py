@@ -1,11 +1,20 @@
-#!/usr/bin/env python3
-# coding: utf-8
 # Ce script permet de télécharger un fichier du serveur FTP vers un dossier en local défini
 
 from ftplib import FTP
 import os
 
-import ftp_login
+# Importe nos fonctions utiles
+import sys
+sys.path.insert(0, '../')
+from utils import func
+
+from ftp import ftp_login
+
+# Importer les variables globales
+import settings
+
+# Charge les paramètres
+settings.init()
 
 ftp = ftp_login.login()
 
@@ -30,5 +39,3 @@ def download():
         print("Problème lors de la fermeture du fichier")
         print("Erreur complète :\n", e)
     print("Téléchargement terminé")
-
-download()

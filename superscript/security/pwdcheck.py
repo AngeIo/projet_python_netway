@@ -1,12 +1,15 @@
-#!/usr/bin/env python
-# coding: utf-8
 # Ce fichier contient une fonction permettant de vérifier la compléxité d'un mot de passe
-
-# Permet de rendre compatible ce script avec Python2 et Python3
-from __future__ import print_function
 
 # Permet la recherche
 import re
+
+# Permet de faire une pause dans le programme
+import time
+
+# Importe nos fonctions utiles
+import sys
+sys.path.insert(0, '../')
+from utils import func
 
 # Cette fonction permet de vérifier si le mot de passe correspond aux exigences de sécurité de la société
 def pwdcheck(password):
@@ -49,12 +52,20 @@ def pwdcheck(password):
     }
 
 # Tests
+def pwdtest():
+    while True:
+        opschoice = func.myChoice("Bienvenue, veuillez choisir une option", "Test password", "Exit")
+        if opschoice == 1:
+            password = "CoucouLaFamille*1" # Mot de passe fort
+            # password = "CA" # Mot de passe faible
 
-password = "CoucouLaFamille*1" # Mot de passe fort
-# password = "CA" # Mot de passe faible
-
-flag = pwdcheck(password)['password_ok']
-if flag:
-    print("Password OK")
-else:
-    print("Password KO")
+            flag = pwdcheck(password)['password_ok']
+            if flag:
+                print("Password OK")
+            else:
+                print("Password KO")
+        elif opschoice == 2:
+            # On exit
+            print("Arrêt du système...")
+            time.sleep(1)
+            break

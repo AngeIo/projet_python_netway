@@ -28,7 +28,16 @@ from utils import func
 settings.init()
 
 # Importe la fonction de gestion des utilisateurs
-from users import manageusers
+from users import manageusers as usr
+
+# Importe la fonction de gestion du protocole FTP
+from ftp import ftpmain as ftp
+
+# Importe la fonction de gestion de la fonction monitoring
+from monitoring import monitoring as mon
+
+# Importe la fonction de gestion de la fonction monitoring
+from security import pwdcheck as pwd
 
 ##################################################################################
 ###                           Main script function                             ###
@@ -62,13 +71,16 @@ def main():
 
     if menuchoice == 1:
         print("Choice 1 - Manage User")
-        manageusers.manusers()
+        usr.manusers()
     elif menuchoice == 2:
         print("Choice 2 - Manage FTP Server")
+        ftp.ftp()
     elif menuchoice == 3:
         print("Choice 3 - IT Monitoring")
+        mon.monitor()
     elif menuchoice == 4:
         print("Choice 4 - Cybersecurity")
+        pwd.pwdtest()
     elif menuchoice == 5:
         print("Choice 5 - Exit")
     else:

@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# coding: utf-8
 # Ce programme permet de créer, modifier, consulter et supprimer des utilisateurs.
 
 # Import différents modules
@@ -169,7 +167,7 @@ def session(username, password): # permet la selection des options
 # Menu des options
 def manusers():
     while True:
-        opschoice = func.myChoice("Bienvenue, veuillez taper register ou login pour utiliser les options", "Register", "Login", "Exit")
+        opschoice = func.myChoice("Bienvenue, veuillez choisir une option", "Register", "Login", "Exit")
         if opschoice == 2:
             login()
         elif opschoice == 1:

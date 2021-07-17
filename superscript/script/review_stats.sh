@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # Ce script permet d'afficher des statistiques à propos du dépôt git
 # Usage: ./review_stats.sh [commit1] [commit2]
 

@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-# coding: utf-8
-
 # Importer les variables globales
 import settings
 

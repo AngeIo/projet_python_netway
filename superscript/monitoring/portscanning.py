@@ -1,7 +1,4 @@
-#!/usr/bin/env python3
-# coding: utf-8
 # This program is used to scan network ports on devices. It shows if the port is open or closed.
-
 
 import socket
 # Prise en charge regex
@@ -48,5 +45,3 @@ def portscanning():
         else:
             print("Port", port, "is closed.")
             continue
-
-portscanning()
