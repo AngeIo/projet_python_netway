@@ -1,4 +1,4 @@
-# Ce fichier contient une fonction permettant de vérifier la compléxité d'un mot de passe
+# Ce fichier contient une fonction permettant de vérifier si le mot de passe peut-être brute force grâce à un dictonnaire de mots communs
 
 # Permet la recherche
 import re
@@ -11,7 +11,10 @@ import sys
 sys.path.insert(0, '../')
 from utils import func
 
-# Cette fonction permet de vérifier si le mot de passe correspond aux exigences de sécurité de la société
+# Importe toutes les fonctions en lien aux mots de passe dans ce programme pour pouvoir les lancer depuis superscript
+from security import pwdbruteforce
+
+# Cette fonction permet de vérifier si le mot de passe est facilement devinable via brute force ou non
 def pwdcheck(password):
     """
     Vérifier la compléxité du mot de passe : 'password'
@@ -53,18 +56,30 @@ def pwdcheck(password):
 
 # Tests
 def pwdtest():
+    password = "CoucouLaFamille*1" # Mot de passe fort
+    # password = "CAcd" # Mot de passe faible
     while True:
-        opschoice = func.myChoice("Bienvenue, veuillez choisir une option", "Test password", "Exit")
+        opschoice = func.myChoice("Bienvenue, veuillez choisir une option", "Test password", "Test brute force password", "Exit")
         if opschoice == 1:
-            password = "CoucouLaFamille*1" # Mot de passe fort
-            # password = "CA" # Mot de passe faible
-
             flag = pwdcheck(password)['password_ok']
             if flag:
                 print("Password OK")
             else:
                 print("Password KO")
         elif opschoice == 2:
+            password = ""
+            while True:
+                password = input("Please enter a password to test with brute force: ")
+                if len(password) < 4:
+                    print("Password must contain at least 4 characters")
+                else:
+                    break
+            result = pwdbruteforce.pwdbrute(password)
+            if result['successful']:
+                print("Password found in %s seconds after testing %s words from our dictionnary\nPassword is not secure" % (result['time'], result['tries']))
+            else:
+                print("Password wasn't found in our dictionnary\nPassword is secure")
+        elif opschoice == 3:
             # On exit
             print("Arrêt du système...")
             time.sleep(1)
