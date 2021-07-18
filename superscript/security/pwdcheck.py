@@ -1,4 +1,4 @@
-# Ce fichier contient une fonction permettant de vérifier si le mot de passe est assez complexe et s'il peut-être brute force grâce à un dictonnaire de mots communs
+# Ce fichier contient une fonction permettant de vérifier si le mot de passe est assez complexe et s'il peut être brute force grâce à un dictonnaire de mots communs
 
 # Permet la recherche
 import re
