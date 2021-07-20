@@ -147,7 +147,7 @@ def session(username, password): # permet la selection des options
         userinfo = input("> ")
         if userinfo in users:
             confirmchoice = func.myChoice("Etes-vous sûr de vouloir supprimer compte de  " + userinfo + "'?", "Yes", "No")
-            if confirm == 1:
+            if confirmchoice == 1:
                 if users[username]["group"] == "admin":
                     print("Suppression du compte de " + userinfo + "'...")
                     del users[userinfo]
@@ -155,12 +155,12 @@ def session(username, password): # permet la selection des options
                     print("Le compte de " + userinfo + "'a été supprimé")
                 else:
                     print ("Vous devez être admin pour effectuer cette fonction")
-            elif confirm == 2:
+            elif confirmchoice == 2:
                 print("Canceling account deletion...")
                 time.sleep(1)
                 print("Account deletion canceled")
             else:
-                print(confirm + " n'est pas une option")
+                print(confirmchoice + " n'est pas une option")
         else:
             print("Il n'y a pas de compte avec cet username")
 
