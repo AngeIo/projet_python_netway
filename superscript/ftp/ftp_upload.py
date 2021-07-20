@@ -18,6 +18,7 @@ ftp = ftp_login.login()
 
 def upload():
     # Ouverture du fichier en read binary, ce qui renvoie un descripteur source_file
-    file = open("Test.txt", 'rb') # Dans notre cas, ouverture d'un fichier txt
-    ftp.storbinary('STOR Test.txt', file)
+    file = open("Test1.txt", 'rb') # Dans notre cas, ouverture d'un fichier txt
+    ftp.storbinary('STOR Test1.txt', file)
+    print("File uploaded\nClosing file...\n")
     file.close() # Fermer le fichier

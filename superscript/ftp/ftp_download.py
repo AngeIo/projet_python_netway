@@ -20,11 +20,11 @@ ftp = ftp_login.login()
 
 def download():
     # Client dossier sauvegarde
-    savedir = "C:/Users/laure/Reception"
+    savedir = "C:/Users/t.echnicien/Desktop/Reception_FTP"
     os.chdir(savedir)
 
     # Serveur - se mettre dans le bon répertoire
-    ftp.cwd("Test")
+    #ftp.cwd("MainFTP")
     # Serveur - nom fichier à copier
     filename = "Test.txt"
     try:
@@ -38,4 +38,4 @@ def download():
     except Exception as e:
         print("Problème lors de la fermeture du fichier")
         print("Erreur complète :\n", e)
-    print("Téléchargement terminé")
+    print("Téléchargement terminé\n")

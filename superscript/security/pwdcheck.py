@@ -99,7 +99,7 @@ def pwdtest():
                 print("Results\n-------\nPassword found in %s seconds after testing %s words from our dictionnary\n/!\ Password is not secure /!\ \n" % (result['time'], result['tries']))
             else:
                 print("\n")
-                print("Results\n-------\nPassword wasn't found in our dictionnary\nPassword is secure\n")
+                print("Results\n-------\nPassword wasn't found in our dictionnary\n")
         elif opschoice == 3:
             while True:
                 password = input("For the tests, please enter a new password: ")
