@@ -3,7 +3,7 @@
 # ******************************************************************************
 #
 # Script Name: superscript.py
-# Version: 0.1 (Pre-alpha)
+# Version: 0.2 (Alpha)
 # Authors: BRETAGNOLLE Guillaume, GERARD Angelo, KANY Kevin, PECH Laurent
 # Creation date: 12 june 2021
 #
@@ -59,10 +59,10 @@ def main():
 *****************************************************""")
     if settings.isFr:
         print("Bienvenue sur superscript ! Fait pour vous aider à gérer votre infrastructure informatique !")
-        print("Par BRETAGNOLLE Guillaume, Angelo GERARD, KANY Kevin, PECH Laurent\n")
+        print("Par BRETAGNOLLE Guillaume, GERARD Angelo, KANY Kevin, PECH Laurent\n")
     else:
         print("Welcome to superscript! Made to help you manage your IT infrastructure!")
-        print("By BRETAGNOLLE Guillaume, Angelo GERARD, KANY Kevin, PECH Laurent\n")
+        print("By BRETAGNOLLE Guillaume, GERARD Angelo, KANY Kevin, PECH Laurent\n")
 
     if settings.isFr:
         menuchoice = func.myChoice("Menu principal", "Gérer les utilisateurs", "Gérer le serveur FTP", "Supervision", "Securité", "Quitter")
