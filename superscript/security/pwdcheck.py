@@ -102,8 +102,10 @@ def pwdtest():
                 print("Results\n-------\nPassword wasn't found in our dictionnary\nPassword is secure\n")
         elif opschoice == 3:
             while True:
-                password = input("For the tests, please enter a new password:")
-                if pwdcheckdisplay(pwdcheck(password)):
+                password = input("For the tests, please enter a new password: ")
+                if len(password) < 4:
+                    print("Password must contain at least 4 characters in order to test it")
+                else:
                     break
         elif opschoice == 4:
             # On exit

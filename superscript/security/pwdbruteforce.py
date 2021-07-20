@@ -21,7 +21,7 @@ def pwdvalid(password):
 def pwdtry():
     successful = False
     # Ouvre le fichier et le lit ligne par ligne
-    with open('security/pwd.dict') as f:
+    with open('security/pwd.dict', encoding="utf8") as f:
         lines = f.read().splitlines()
     # Lance le chrono pour calculer le temps d'exécution total du brute force
     start_time = time.time()
