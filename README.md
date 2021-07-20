@@ -7,7 +7,7 @@ This project's goal is to help the company's technicians managing the IT infrast
 The best way to do that is by making a collection of utilities in a single script that we call "superscript".
 
 ## Screenshot
-<img width="500px" src="img/screenshot.png">
+<img width="600px" src="img/screenshot.png">
 
 ## Features / To-do list
 - [x] Manage users (create, manage and list users/admins; manage passwords)
