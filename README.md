@@ -12,7 +12,7 @@ The best way to do that is by making a collection of utilities in a single scrip
 ## Features / To-do list
 - [ ] Manage users (create, manage and list users/admins; manage passwords)
 - [ ] Manage FTP (store files on server; daily backups)
-- [ ] IT Monitoring (daily port scanning)
+- [x] IT Monitoring (daily port scanning)
 - [ ] Cybersecurity (brute force attacks simulations)
 - [x] Navigation menu (CLI UI to select a feature to use)
 
