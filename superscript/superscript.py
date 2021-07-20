@@ -70,19 +70,19 @@ def main():
         menuchoice = func.myChoice("Main Menu", "Manage User", "Manage FTP Server", "IT Monitoring", "Cybersecurity", "Exit")
 
     if menuchoice == 1:
-        print("Choice 1 - Manage User")
+        print("\nChoice 1 - Manage User\n")
         usr.manusers()
     elif menuchoice == 2:
-        print("Choice 2 - Manage FTP Server")
+        print("\nChoice 2 - Manage FTP Server\n")
         ftp.ftp()
     elif menuchoice == 3:
-        print("Choice 3 - IT Monitoring")
+        print("\nChoice 3 - IT Monitoring\n")
         mon.monitor()
     elif menuchoice == 4:
-        print("Choice 4 - Cybersecurity")
+        print("\nChoice 4 - Cybersecurity\n")
         pwd.pwdtest()
     elif menuchoice == 5:
-        print("Choice 5 - Exit")
+        print("\nChoice 5 - Exit\n")
     else:
         print('Error', file=stderr)
 

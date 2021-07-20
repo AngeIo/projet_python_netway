@@ -54,32 +54,58 @@ def pwdcheck(password):
         'symbol_error' : symbol_error,
     }
 
+def pwdcheckdisplay(tab):
+    print("\n")
+    print("Results\n-------")
+    if tab['password_ok']:
+        print("Your password comply with security policy of the company\n")
+        return True
+    else:
+        print("/!\ Your password doesn't comply with security policy of the company /!\ ")
+        if tab['length_error']:
+            print("- Length error : Password must contain at least 8 characters")
+        if tab['digit_error']:
+            print("- Digit error : Password must contain at least 1 digit")
+        if tab['uppercase_error']:
+            print("- Uppercase error : Password must contain at least 1 uppercase letter")
+        if tab['lowercase_error']:
+            print("- Lowercase error : Password must contain at least 1 lowercase letter")
+        if tab['symbol_error']:
+            print("- Symbol error : Password must contain at least 1 symbol (any non-alphanumeric character)")
+        print("\n")
+        # print("As a reminder, your password must contain at least:\n- 8 characters\n- 1 digit\n- 1 uppercase letter\n- 1 lowercase letter\n- 1 symbol (any non-alphanumeric character)\n\n") # Afficher les conditions à respecter pour que le mot de passe soit accepté
+    return False
+
 # Tests
 def pwdtest():
-    password = "CoucouLaFamille*1" # Mot de passe fort
+    # password = "CoucouLaFamille*1" # Mot de passe fort
     # password = "CAcd" # Mot de passe faible
+    flag = 0
     while True:
-        opschoice = func.myChoice("Bienvenue, veuillez choisir une option", "Test password", "Test brute force password", "Exit")
-        if opschoice == 1:
-            flag = pwdcheck(password)['password_ok']
-            if flag:
-                print("Password OK")
+        while not flag:
+            password = input("For the tests, please enter a new password: ")
+            if len(password) < 4:
+                print("Password must contain at least 4 characters in order to test it")
             else:
-                print("Password KO")
+                flag = 1
+                break
+        opschoice = func.myChoice("\nCybersecurity - Welcome, please choose an option", "Testing password compliance with policy", "Cracking password with brute force", "Enter a new password to test", "Exit")
+        if opschoice == 1:
+            pwdcheckdisplay(pwdcheck(password))
         elif opschoice == 2:
-            password = ""
-            while True:
-                password = input("Please enter a password to test with brute force: ")
-                if len(password) < 4:
-                    print("Password must contain at least 4 characters")
-                else:
-                    break
             result = pwdbruteforce.pwdbrute(password)
             if result['successful']:
-                print("Password found in %s seconds after testing %s words from our dictionnary\nPassword is not secure" % (result['time'], result['tries']))
+                print("\n")
+                print("Results\n-------\nPassword found in %s seconds after testing %s words from our dictionnary\n/!\ Password is not secure /!\ \n" % (result['time'], result['tries']))
             else:
-                print("Password wasn't found in our dictionnary\nPassword is secure")
+                print("\n")
+                print("Results\n-------\nPassword wasn't found in our dictionnary\nPassword is secure\n")
         elif opschoice == 3:
+            while True:
+                password = input("For the tests, please enter a new password:")
+                if pwdcheckdisplay(pwdcheck(password)):
+                    break
+        elif opschoice == 4:
             # On exit
             print("Arrêt du système...")
             time.sleep(1)
