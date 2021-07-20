@@ -10,7 +10,7 @@ The best way to do that is by making a collection of utilities in a single scrip
 <img width="500px" src="img/screenshot.png">
 
 ## Features / To-do list
-- [ ] Manage users (create, manage and list users/admins; manage passwords)
+- [x] Manage users (create, manage and list users/admins; manage passwords)
 - [x] Manage FTP (store files on server; daily backups)
 - [x] IT Monitoring (daily port scanning)
 - [ ] Cybersecurity (brute force attacks simulations)
