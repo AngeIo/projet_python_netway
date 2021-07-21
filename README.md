@@ -13,7 +13,7 @@ The best way to do that is by making a collection of utilities in a single scrip
 - [x] Manage users (create, manage and list users/admins; manage passwords)
 - [x] Manage FTP (store files on server; daily backups)
 - [x] IT Monitoring (daily port scanning)
-- [ ] Cybersecurity (brute force attacks simulations)
+- [x] Cybersecurity (brute force attacks simulations)
 - [x] Navigation menu (CLI UI to select a feature to use)
 
 ## Installation
