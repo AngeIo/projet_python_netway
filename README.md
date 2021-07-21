@@ -7,12 +7,12 @@ This project's goal is to help the company's technicians managing the IT infrast
 The best way to do that is by making a collection of utilities in a single script that we call "superscript".
 
 ## Screenshot
-<img width="500px" src="img/screenshot.png">
+<img width="600px" src="img/screenshot.png">
 
 ## Features / To-do list
-- [ ] Manage users (create, manage and list users/admins; manage passwords)
-- [ ] Manage FTP (store files on server; daily backups)
-- [ ] IT Monitoring (daily port scanning)
+- [x] Manage users (create, manage and list users/admins; manage passwords)
+- [x] Manage FTP (store files on server; daily backups)
+- [x] IT Monitoring (daily port scanning)
 - [ ] Cybersecurity (brute force attacks simulations)
 - [x] Navigation menu (CLI UI to select a feature to use)
 
@@ -20,7 +20,7 @@ The best way to do that is by making a collection of utilities in a single scrip
 Please make sure you have the following prerequisites:
 
 - [Git](https://git-scm.com/downloads)
-- [Python 2.7 or 3](https://www.python.org/downloads/)
+- [Python 3](https://www.python.org/downloads/)
 
 ### Downloading the source code
 Clone the repository:
@@ -38,6 +38,7 @@ git pull
 
 ## Usage
 ```shell
+cd superscript/
 ./superscript
 ```
 
